@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Planetas</title>
+</head>
+<body>
+    <h1>Lista de Planetas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Galaxia</th>
+            <th>Tamaño</th>
+            <th>Años Luz</th>
+        </tr>
+        <tr th:each="planetas : ${planetas}">
+            <td th:text="${planeta.id}"></td>
+            <td th:text="${planeta.nombre}"></td>
+            <td th:text="${planeta.tipo}"></td>
+            <td th:text="${planeta.galaxia}"></td>
+            <td th:text="${planeta.tamaño}"></td>
+            <td th:text="${planeta.añosLuz}"></td>
+        </tr>
+    </table>
+</body>
+</html>

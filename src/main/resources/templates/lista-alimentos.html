@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Frutas</title>
+</head>
+<body>
+    <h1>Lista de Frutas</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Sabor</th>
+            <th>Color</th>
+            <th>Posee Semillas</th>
+        </tr>
+        <tr th:each="Fruta : ${frutas}">
+            <td th:text="${fruta.id}"></td>
+            <td th:text="${fruta.nombre}"></td>
+            <td th:text="${fruta.sabor}"></td>
+            <td th:text="${fruta.color}"></td>
+            <td th:text="${fruta.tieneSemillas}"></td>
+        </tr>
+    </table>
+</body>
+</html>

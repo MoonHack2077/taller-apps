@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Relojes</title>
+</head>
+<body>
+    <h1>Lista de Relojes</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Tipo</th>
+            <th>Largo</th>
+            <th>Ancho</th>
+        </tr>
+        <tr th:each="reloj : ${canciones}">
+            <td th:text="${reloj.id}"></td>
+            <td th:text="${reloj.marca}"></td>
+            <td th:text="${reloj.tipo}"></td>
+            <td th:text="${reloj.largo}"></td>
+            <td th:text="${reloj.ancho}"></td>
+        </tr>
+    </table>
+</body>
+</html>
